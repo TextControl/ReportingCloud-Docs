@@ -3,7 +3,7 @@
     "Name": "introduction",
     "DisplayName": "Get Started",
     "Active": false,
-    "Action":  "chapter",
+    "Action": "chapter",
     "SubTopics": [
       {
         "Name": "whatisreportingcloud",
@@ -26,6 +26,20 @@
       {
         "Name": "quickstart-dotnet",
         "DisplayName": ".NET Framework Quickstart",
+        "Active": false,
+        "FeaturedTag": false
+      }
+    ]
+  },
+  {
+    "Name": "sdks",
+    "DisplayName": "ReportingCloud SDKs",
+    "Active": false,
+    "Action": "chapter",
+    "SubTopics": [
+      {
+        "Name": "dotnet",
+        "DisplayName": ".NET Framework SDK (C#)",
         "Active": false,
         "FeaturedTag": false
       }
