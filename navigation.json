@@ -42,6 +42,12 @@
         "DisplayName": ".NET Framework SDK (C#)",
         "Active": false,
         "FeaturedTag": false
+      },
+      {
+        "Name": "php",
+        "DisplayName": "ReportingCloud PHP SDK",
+        "Active": false,
+        "FeaturedTag": false
       }
     ]
   },
