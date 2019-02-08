@@ -1,0 +1,78 @@
+[
+  {
+    "Name": "introduction",
+    "DisplayName": "Get Started",
+    "Active": false,
+    "Action":  "chapter",
+    "SubTopics": [
+      {
+        "Name": "whatisreportingcloud",
+        "DisplayName": "What is ReportingCloud?",
+        "Active": false,
+        "FeaturedTag": false
+      },
+      {
+        "Name": "trial",
+        "DisplayName": "Work with your Trial Account",
+        "Active": false,
+        "FeaturedTag": false
+      },
+      {
+        "Name": "apikey",
+        "DisplayName": "Creating API Keys",
+        "Active": false,
+        "FeaturedTag": false
+      },
+      {
+        "Name": "quickstart-dotnet",
+        "DisplayName": ".NET Framework Quickstart",
+        "Active": false,
+        "FeaturedTag": false
+      }
+    ]
+  },
+  {
+    "Name": "endpoint",
+    "DisplayName": "API Reference",
+    "Active": false,
+    "Action": "endpoint",
+    "SubTopics": [
+      {
+        "Name": "",
+        "DisplayName": "Overview",
+        "Active": false,
+        "FeaturedTag": false
+      },
+      {
+        "Name": "document",
+        "DisplayName": "Creating Documents",
+        "Active": false,
+        "FeaturedTag": false
+      },
+      {
+        "Name": "templates",
+        "DisplayName": "Managing Templates",
+        "Active": false,
+        "FeaturedTag": false
+      },
+      {
+        "Name": "account",
+        "DisplayName": "Managing Account",
+        "Active": false,
+        "FeaturedTag": false
+      },
+      {
+        "Name": "fonts",
+        "DisplayName": "Font Information",
+        "Active": false,
+        "FeaturedTag": false
+      },
+      {
+        "Name": "proofing",
+        "DisplayName": "Proofing",
+        "Active": false,
+        "FeaturedTag": false
+      }
+    ]
+  }
+]

@@ -1,0 +1,69 @@
+<h1>Creating Secure API Keys</h1>
+
+<p>All ReportingCloud endpoints require a "ReportingCloud-APIKey" or a "Basic" user authorization to access the user acount, data and templates. Only one of these two methods are required.</p>
+
+<div class="note note-alarm">
+    We highly recommend to use API Keys instead of the "Basic" authorization for security reasons.
+</div>
+
+<h2>The advantages of API Keys</h2>
+
+<ul class="background-list">
+    <li>
+        <p>
+            <strong>Entropy</strong><br />
+ReportingCloud API Keys have secrets that are securely randomly generated strings over 40 characters long with a significantly greater entropy. Typically, usernames (such as e-mail addresses) and passwords are reused across many sites and could be compromised for more than one site.
+        </p>
+    </li>
+    <li>
+        <p>
+            <strong>Password reset</strong><br />
+            If you need to reset your ReportingCloud password, you don't have to update your code to match the new password.
+        </p>
+    </li>
+    <li>
+        <p>
+            <strong>Independence</strong><br />
+            ReportingCloud API Keys are independent of the account's master credentials. They can be deleted and created at will - up to 10 API Keys can be created for a single account.
+        </p>
+    </li>
+    <li>
+        <p>
+            <strong>Traceability</strong><br />
+            It is possible to create a unique API Key for each project that uses ReportingCloud. In the Information section of each transaction log entry, the used API Key is displayed.
+        </p>
+    </li>
+</ul>
+
+<p>An API Key is a token that a client provides when making API calls. Instead of sending your username and password using the Basic authentication, a created API Key token is used.</p>
+
+<div class="note note-warning">
+    Keep it safe like a username/password combination as ReportingCloud can be used with your quota when one of your API Keys is used. Anyway, if compromised, you can easily delete this API Key and create a new one without resetting your password.
+</div>
+
+<h2>Manage API Keys</h2>
+
+<ol class="background-list">
+    <li>
+        <p>To create new API Keys, visit your portal and click <a target="_blank" href="https://portal.reporting.cloud/Manage/Index/">Manage Account</a>.</p>
+    </li>
+    <li>
+        <p>Click <strong>Create Key</strong> to create a new API Key.</p>
+        <span class="img-container">
+            <img src="{path}introduction/images/apikey.png" />
+        </span>
+    </li>
+    <li>
+        <p>To delete an API Key, click the <strong>Delete Key</strong> button right next to the API Key in the list.</p>
+    </li>
+</ol>
+
+<h2>Authorize Requests</h2>
+
+<p>The Authorization HTTP header must contain the new method and the key.</p>
+
+<p>The authorization method and a space i.e. "ReportingCloud-APIKey " is then put before the actual API Key string. Sample:</p>
+
+<p class="inline-code">Authorization: ReportingCloud-APIKey oMDM4MrAqL9QEOpyzupnQW5NjvCNtvE5cVDaaLqxI</p>
+
+<p><a href="../../endpoint/account">3 account endpoints</a> are available in the ReportingCloud API to manage API Keys.</p>
