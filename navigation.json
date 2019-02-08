@@ -28,12 +28,6 @@
         "DisplayName": ".NET Framework Quickstart",
         "Active": false,
         "FeaturedTag": false
-      },
-      {
-        "Name": "quickstart-dotnet",
-        "DisplayName": ".NET Framework Quickstart",
-        "Active": false,
-        "FeaturedTag": false
       }
     ]
   },
