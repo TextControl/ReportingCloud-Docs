@@ -38,6 +38,12 @@
     "Action": "chapter",
     "SubTopics": [
       {
+        "Name": "overview",
+        "DisplayName": "SDK Overview",
+        "Active": false,
+        "FeaturedTag": false
+      },
+      {
         "Name": "dotnet",
         "DisplayName": ".NET Framework SDK (C#)",
         "Active": false,
@@ -46,6 +52,18 @@
       {
         "Name": "php",
         "DisplayName": "ReportingCloud PHP SDK",
+        "Active": false,
+        "FeaturedTag": false
+      },
+      {
+        "Name": "java",
+        "DisplayName": "ReportingCloud Java SDK",
+        "Active": false,
+        "FeaturedTag": false
+      },
+      {
+        "Name": "ruby",
+        "DisplayName": "ReportingCloud Ruby SDK",
         "Active": false,
         "FeaturedTag": false
       }
