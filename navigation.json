@@ -24,6 +24,12 @@
         "FeaturedTag": false
       },
       {
+        "Name": "portal",
+        "DisplayName": "Portal Overview",
+        "Active": false,
+        "FeaturedTag": false
+      },
+      {
         "Name": "quickstart-dotnet",
         "DisplayName": ".NET Framework Quickstart",
         "Active": false,
