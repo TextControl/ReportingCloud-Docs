@@ -1,0 +1,59 @@
+<h1>Merging Templates</h1>
+
+<p>The basic idea of ReportingCloud is to populate placeholders (<em>merge fields</em>) in templates to create the final document.</p>
+
+<p>Invoices, quotes or any other dynamic documents can be created from any application: Desktop, web or mobile. Whether creating an iPhone, Android, Windows Phone or web app - using Text Control ReportingCloud, professional documents can be created with one simple Web API call. The <a href="../../endpoint/">Web API endpoints</a> enable developers to manage templates and to create documents.</p>
+
+<h2>The Basic Idea</h2>
+
+<p>The most typical application of ReportingCloud is to merge MS Word compatible templates with JSON data. These templates contain merge fields and repeating blocks that are populated with hierarchical data. ReportingCloud is matching these fields and merge blocks automatically with data from your JSON data in form of arrays.</p>
+
+<p>The following illustration shows this concept. On the left, you can see an MS Word compatible template with merge fields. This template gets merged with JSON data using the endpoint <a href="../../endpoint/document/merge/">document/merge</a>. The response of this request is an Adobe PDF document encoded as a Base64 string.</p>
+
+<span class="img-container">
+    <img src="{path}concepts/images/concept.png" />
+</span>
+
+<h2>The Merging Workflow</h2>
+
+<p>This is an example of how you can use the ReportingCloud Web API to merge data into a template:</p>
+
+<ol class="background-list">
+    <li>
+        <p>You create your document exactly as you want it to look like (WYSIWYG) using the template editor or any word processor that supports MS Word formats.</p>
+    </li>
+    <li>
+        <p>As placeholders, merge fields are added to the document. These merge fields get names that should match your data (name/value pairs) in the JSON string.</p>
+    </li>
+    <li>
+        <p>In your <a href="../../endpoint/document/merge/">document/merge</a> request, pass the JSON data with the actual data that should be used to populate the placeholders.</p>
+    </li>
+</ol>
+
+<h2>Sample Request</h2>
+
+<p>The following sample request shows how to create documents based on templates and data.</p>
+
+<ul class="nav nav-tabs">
+    <li class="nav-item">
+        <a class="nav-link active" data-toggle="tab" href="#dotnet">.NET</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" data-toggle="tab" href="#php">PHP</a>
+    </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane active" id="dotnet">
+        <p class="mt-3">Request:</p>
+        <script src="https://gist.github.com/bjoerntx/e89c300e6452fb90f261933df4ab5c07.js"></script>
+        <p>Results:</p>
+        <script src="https://gist.github.com/bjoerntx/942442433c2052f0bc4da418c6d79196.js"></script>
+    </div>
+    <div class="tab-pane" id="php">
+        <p class="mt-3">Request:</p>
+        <script src="https://gist.github.com/jonathanmaron/07e9ce9103c5dc34275de40ee6443c85.js"></script>
+        <p>Results:</p>
+        <script src="https://gist.github.com/jonathanmaron/e5ac1ccc62345091030c750ba6cae1e1.js"></script>
+    </div>
+</div>

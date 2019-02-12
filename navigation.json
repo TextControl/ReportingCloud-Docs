@@ -1,7 +1,7 @@
 [
   {
     "Name": "introduction",
-    "DisplayName": "Get Started",
+    "DisplayName": "Introduction",
     "Active": false,
     "Action": "chapter",
     "SubTopics": [
@@ -32,6 +32,20 @@
       {
         "Name": "quickstart-dotnet",
         "DisplayName": ".NET Framework Quickstart",
+        "Active": false,
+        "FeaturedTag": false
+      }
+    ]
+  },
+  {
+    "Name": "concepts",
+    "DisplayName": "Concepts",
+    "Active": false,
+    "Action": "chapter",
+    "SubTopics": [
+      {
+        "Name": "mergingtemplates",
+        "DisplayName": "Merging Templates",
         "Active": false,
         "FeaturedTag": false
       }
