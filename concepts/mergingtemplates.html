@@ -36,6 +36,13 @@
 
 <p>Another way is to send the template with the <a href="../../endpoint/document/merge/">document/merge</a> request in the <a href="../../endpoint/document/merge#MergeBody-Post">mergeBody</a> object. The template can be passed as a Base64 encoded string. Supported formats are RTF, DOC, DOCX and TX.</p>
 
+<p>Templates (that usually doesn't contain sensitive data) can be stored in the ReportingCloud template storage. Using the Web API, potentially sensitive data is sent to our servers in JSON format. ReportingCloud merges this data with the template and returns a resulting document.</p>
+
+<p>We never store any merge data nor created documents on our servers at any time. Only transaction meta data to log the transaction is stored to provide statistics and to calculate the document quota.</p>
+
+<p>Naturally, the merge process is faster, if the template has been already uploaded to the template storage. If you reuse templates many times, it makes sense to upload the templates to the storage, so that the template must not be uploaded every time the template is merged.</p>
+
+<p>If you send the template with your request, the template is temporarily uploaded to our servers, unpacked in memory, merged and deleted after the merge process. At no time, this template is stored physically on our servers.</p>
 
 <div class="note note-warning">
     We recommend to store the templates in the ReportingCloud template storage and use them from there for document creation processes for performance reasons.
