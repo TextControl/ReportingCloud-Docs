@@ -48,6 +48,12 @@
         "DisplayName": "Merging Templates",
         "Active": false,
         "FeaturedTag": false
+      },
+      {
+        "Name": "dataformat",
+        "DisplayName": "The merge data JSON Object",
+        "Active": false,
+        "FeaturedTag": false
       }
     ]
   },

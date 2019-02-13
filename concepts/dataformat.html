@@ -1,0 +1,35 @@
+<h1>The Merge Data JSON Object Format Explained</h1>
+
+<p>When merging templates with data, a JSON object contains merge data for all merge fields and merge blocks in the document. Using the language specific SDKs, the JSON object is created automatically and you don't need to know the exact expected JSON structure. For example, the <a href="../sdks/dotnet/">.NET SDK</a> accepts an object as data which is then transformed to the required JSON data implicitly.</p>
+
+<p>Consider the following .NET class:</p>
+
+<script src="https://gist.github.com/bjoerntx/08630f6b3bdd031e42f7453de2810b65.js"></script>
+
+<p>Now, an instance of that object is created and passed to the <a href="http://textcontrol.github.io/TXTextControl.ReportingCloud.DotNet/html/2a18e15e-8651-96a0-f3bf-cd19145306e6.htm">MergeData</a> property of the <a href="http://textcontrol.github.io/TXTextControl.ReportingCloud.DotNet/html/8dac64ac-9e03-c9a5-828b-d052a40a868a.htm">MergeBody</a> object:</p>
+
+<script src="https://gist.github.com/bjoerntx/fabbd73cc0f4da2ae20b2d6e7b9cbaef.js"></script>
+
+<p>In the <a href="https://www.textcontrol.com/blog/2016/10/04/reportingcloud-the-mergedata-json-object-format-explained/">MergeDocument</a> method, the <em>MergeBody</em> object is simply passed as a parameter:</p>
+
+<script src="https://gist.github.com/bjoerntx/59fd1b32af705319fb2384e537176c89.js"></script>
+
+<p>Internally, the wrapper is creating the expected JSON format of the complete <a href="../../endpoint/document/merge#MergeBody-Post">mergeBody</a> object:</p>
+
+<script src="https://gist.github.com/bjoerntx/955aaebbf8a88e1fdb6d7117cfde6abd.js"></script>
+
+<h2>Sample Template</h2>
+
+<p>The sample template, that gets copied into your template storage when creating a trial account, contains top level merge fields and a merge block that contains separate merge fields:</p>
+
+<span class="img-container">
+    <img src="{path}concepts/images/fields.jpg" />
+</span>
+
+<p>Top level merge fields are all fields in a template that are not part of a merge block. The complete template is repeated based on the number of records (array entries) in the merge data. Merge fields encapsulated in a merge block are repeated based on the number of merge block data rows in the JSON array. Additionally, merge blocks can be nested in unlimited levels. The following JSON data contains 1 top level record:</p>
+
+<script src="https://gist.github.com/bjoerntx/c067512b1572fa2b03901e690fd4a02e.js"></script>
+
+<p>The data is part of an JSON array. The array contains 1 top level entry and this entry has two items in the merge block item. The following sample JSON structure contains 2 top level array entries that produces 2 resulting documents:</p>
+
+<script src="https://gist.github.com/bjoerntx/8847221e51e5c1e3d7a1f166085a8801.js"></script>

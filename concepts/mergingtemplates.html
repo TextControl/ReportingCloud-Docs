@@ -30,6 +30,16 @@
     </li>
 </ol>
 
+<h2>Template Storage Considerations</h2>
+
+<p>Templates can be created and stored in the ReportingCloud <a href="../introduction/portal#Manage-Templates">template</a> storage and loaded from there when merging a template. In this case, the template name is simply passed as a request parameter when calling the <a href="../../endpoint/document/merge/">document/merge</a> endpoint.</p>
+
+<p>Another way is to send the template with the <a href="../../endpoint/document/merge/">document/merge</a> request in the <a href="../../endpoint/document/merge#MergeBody-Post">mergeBody</a> object. The template can be passed as a Base64 encoded string. Supported formats are RTF, DOC, DOCX and TX.</p>
+
+
+<div class="note note-warning">
+    We recommend to store the templates in the ReportingCloud template storage and use them from there for document creation processes for performance reasons.
+</div>
 <h2>Sample Request</h2>
 
 <p>The following sample request shows how to create documents based on templates and data.</p>
