@@ -51,7 +51,13 @@
       },
       {
         "Name": "dataformat",
-        "DisplayName": "The merge data JSON Object",
+        "DisplayName": "The Merge Data JSON Object",
+        "Active": false,
+        "FeaturedTag": false
+      },
+      {
+        "Name": "blocks",
+        "DisplayName": "Nested Repeating Blocks",
         "Active": false,
         "FeaturedTag": false
       }
