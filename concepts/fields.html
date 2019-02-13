@@ -2,6 +2,12 @@
 
 <p>A datasource excerpt file is used to fill the drop-down lists of the template editor with proper merge fields, relations and dummy data for a template preview. A datasource excerpt file is not your actual data that is used to merge your template. It helps you to design your templates and to insert the proper field names.</p>
 
+<h2>Preparing the Data with .NET</h2>
+
+<div class="note note-warning">
+    Skip this .NET description, if you already have your JSON data you would like to use for the merge process and continue <a href="#Adding-the-Data-Excerpt-File">here</a>.
+</div>
+
 <p>In this tutorial, you will learn how to create a new template from a class in .NET. The first part shows how to create a project in .NET where the second part is independent from the used language and shows how to create a template using the template designer.</p>
 
 <p>The accepted JSON format in the <a href="../../endpoint/document/merge">document/merge</a> method of ReportingCloud is a JSON string containing an array of objects.</p>
@@ -32,6 +38,8 @@
     </li>
 </ol>
 
+<h2>Adding the Data Excerpt File</h2>
+
 <p>This Json format is exactly the format that is accepted by the <a href="../../endpoint/document/merge">document/merge</a> method of ReportingCloud and the online template designer.</p>
 
 <ol class="background-list">
@@ -47,6 +55,11 @@
         </span>
         <p>Save the excerpt file by clicking the <em>Excerpt</em> button.</p>
     </li>
+</ol>
+
+<h2>Create the Template</h2>
+
+<ol class="background-list">
     <li>
         <p>Click on <a href="https://portal.reporting.cloud/MyTemplates/Index/">My Templates</a>, choose <em>New Template...</em> and type in a name and choose your preferred template format such as DOCX. Confirm with <em>OK</em>.</p>
         <span class="img-container">
