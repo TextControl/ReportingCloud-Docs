@@ -56,6 +56,12 @@
         "FeaturedTag": false
       },
       {
+        "Name": "fields",
+        "DisplayName": "Templates with JSON Excerpt Files",
+        "Active": false,
+        "FeaturedTag": false
+      },
+      {
         "Name": "blocks",
         "DisplayName": "Nested Repeating Blocks",
         "Active": false,

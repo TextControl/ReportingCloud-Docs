@@ -1,0 +1,92 @@
+<h1>Creating Templates with the Designer</h1>
+
+<p>A datasource excerpt file is used to fill the drop-down lists of the template editor with proper merge fields, relations and dummy data for a template preview. A datasource excerpt file is not your actual data that is used to merge your template. It helps you to design your templates and to insert the proper field names.</p>
+
+<p>In this tutorial, you will learn how to create a new template from a class in .NET. The first part shows how to create a project in .NET where the second part is independent from the used language and shows how to create a template using the template designer.</p>
+
+<p>The accepted JSON format in the <a href="../../endpoint/document/merge">document/merge</a> method of ReportingCloud is a JSON string containing an array of objects.</p>
+
+<ol class="background-list">
+    <li>
+        <p>If you don't have a ReportingCloud account, create a new account:</p>
+        <p><a href="https://portal.reporting.cloud/Account/Register/">Register</a></p>
+    </li>
+    <li>
+        <p>Open Visual Studio and create a new application (type and language doesn't matter in this tutorial).</p>
+    </li>
+    <li>
+        <p>Start the <em>Package Manager Console</em> from the <em>NuGet Package Manager</em> menu item of the <em>Tools</em> main menu. Type in the following command to install <em>Newtonsoft Json</em>:</p>
+        <p class="nuget">PM> Install-Package TXTextControl.ReportingCloud</p>
+    </li>
+    <li>
+        <p>Create the required classes for your report. The following sample shows a simple invoice class:</p>
+        <script src="https://gist.github.com/bjoerntx/be0c4bc97b57b228cfe7aae7b76fb5b6.js"></script>
+    </li>
+    <li>
+        <p>Use the following code to create an instance of your data and use <em>JsonConvert</em> class to serialize the object to a Json string:</p>
+        <script src="https://gist.github.com/bjoerntx/d80f8f78d6074b339d1bc56ebc050146.js"></script>
+        <p>Set a breakpoint to line 28 and copy the string from the <em>Text Visualizer</em> to the clipboard:</p>
+        <span class="img-container">
+            <img src="{path}concepts/images/json_reportingcloud.png" />
+        </span>
+    </li>
+</ol>
+
+<p>This Json format is exactly the format that is accepted by the <a href="../../endpoint/document/merge">document/merge</a> method of ReportingCloud and the online template designer.</p>
+
+<ol class="background-list">
+    <li>
+        <p>Open a browser and navigate to:</p>
+        <p><a href="https://portal.reporting.cloud">https://portal.reporting.cloud</a></p>
+        <p>Log in with your credentials.</p>
+    </li>
+    <li>
+        <p>Click on <a href="https://portal.reporting.cloud/MyDatasources/Index/">My Datasource Excerpts</a> and create a new excerpt file by adding a name and pasting the Json string into the <em>Datasource Excerpt</em> text box:</p>
+        <span class="img-container">
+            <img src="{path}concepts/images/datasource2.png" />
+        </span>
+        <p>Save the excerpt file by clicking the <em>Excerpt</em> button.</p>
+    </li>
+    <li>
+        <p>Click on <a href="https://portal.reporting.cloud/MyTemplates/Index/">My Templates</a>, choose <em>New Template...</em> and type in a name and choose your preferred template format such as DOCX. Confirm with <em>OK</em>.</p>
+        <span class="img-container">
+            <img src="{path}concepts/images/filename.png" />
+        </span>
+    </li>
+    <li>
+        <p>In the next dialog, click on <em>Edit template</em>, choose the created datasource excerpt file from the drop-down box and confirm with <em>Edit Template</em>:</p>
+        <span class="img-container">
+            <img src="{path}concepts/images/datasource_edit.png" />
+        </span>
+    </li>
+    <li>
+        <p>The template editor is opened and you can start designing your template. Open the <em>Merge Field</em> drop-down box from the <em>Merge Fields</em> group of the <em>Reports</em> ribbon tab.</p>
+        <p>Open the <em>master</em> table and insert the merge field <em>invoicenumber</em>.</p>
+        <span class="img-container">
+            <img src="{path}concepts/images/editor1.png" />
+        </span>
+    </li>
+    <li>
+        <p>After the merge field has been added, insert some blank lines and then click on <em>Merge Block</em> to select items from the available drop-down items. In the opened dialog box, check description and name and confirm with <em>OK</em>.</p>
+        <span class="img-container">
+            <img src="{path}concepts/images/editor2.png" />
+        </span>
+    </li>
+    <li>
+        <p>A repeating merge block (marked as red) is inserted into the template:</p>
+        <span class="img-container">
+            <img src="{path}concepts/images/editor3.png" />
+        </span>
+    </li>
+    <li>
+        <p>Now, click on <em>Preview Merge Results</em> in the <em>Preview</em> group and confirm the opened dialog box with <em>OK</em>.</p>
+        <span class="img-container">
+            <img src="{path}concepts/images/editor4.png" />
+        </span>
+    </li>
+    <li>
+        <p>Finish your template design, save the template and use <em>Back</em> to navigate back to the dashboard.</p>
+    </li>
+</ol>
+
+<p>This template contains the proper field and block names that matches your datasource. When merging the template with the list of <em>Invoice</em> objects, ReportingCloud will populate the merge fields with the public property values of your invoice objects.</p>
