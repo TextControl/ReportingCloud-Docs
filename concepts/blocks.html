@@ -1,0 +1,80 @@
+<h1>Merging Nested Repeating Blocks</h1>
+
+<p>Thanks to the data source excerpt file concept, it is very easy to create templates with complex structures such as nested repeating blocks. A data source excerpt file is used to fill the drop-down lists of the template editor with proper merge fields, relations and dummy data for a template preview. A data source excerpt file is not the actual data that is used to merge the template. It helps to design the templates and to insert the proper field names.</p>
+
+<p>In this article, the following .NET classes are used as the data source structure for the ReportingCloud merge process:</p>
+
+<script src="https://gist.github.com/bjoerntx/cdc8328c4ba26690e66a8ecc03b418f6.js"></script>
+
+<p><em>Report</em> is the master template which reflects the complete template. In other words, the complete template is merged with the number of rows in this master template. The following code shows the instantiated .NET object that is used:</p>
+
+<script src="https://gist.github.com/bjoerntx/625c5060906a65bb2a94837e26d650d0.js"></script>
+
+<p>This object has 1 <em>Sale</em> object which consists of 2 different <em>Item</em> objects. In the template, a list of all <em>Sale</em> items should be visualized as a merge block. Inside this outer merge block, all <em>Item</em> objects should get listed as a nested merge block. The following screenshot shows this structure in the template:</p>
+
+<span class="img-container">
+    <img src="{path}concepts/images/sales-items.png" />
+</span>
+
+<p>But how to insert these blocks in the ReportingCloud template designer?</p>
+
+<ol class="background-list">
+    <li>
+        <p>First, we need to create a serialized JSON string from the object. You can create this string manually or simply serialize this object using the <a href="https://msdn.microsoft.com/en-us/library/system.web.script.serialization.javascriptserializer(v=vs.110).aspx">JavaScriptSerializer</a> class:</p>
+
+        <script src="https://gist.github.com/bjoerntx/9c4e0331c8e8550407416f42cd0a68dd.js"></script>
+    </li>
+    <li>
+        <p>The results will look similar to this:</p>
+        <script src="https://gist.github.com/bjoerntx/9187051bc76c0736397dcfeeb217d890.js"></script>
+    </li>
+    <li>
+        <p>In the ReportingCloud <a target="_blank" href="https://portal.reporting.cloud/">Portal</a>, open <em>My Datasource Excerpts</em> and create a new excerpt file by adding a name and pasting the JSON string to the excerpt input. As ReportingCloud expects an array of objects as the data source, enclose the complete string with square brackets.</p>
+
+        <span class="img-container">
+            <img src="{path}concepts/images/rc_source.png" />
+        </span>
+    </li>
+    
+</ol>
+
+<p>Now, when designing the template in the ReportingCloud template designer, the merge blocks are listed in the available <em>Insert Merge Block</em> drop-down button. In the ReportingCloud Portal, create a new template in the <a target="_blank" href="https://portal.reporting.cloud/MyTemplates/">My Templates</a> area. Before editing the template, select the created datasource excerpt file from the available sources and confirm with <em>Edit Template</em>.</p>
+
+<span class="img-container">
+    <img src="{path}concepts/images/datasource.png" />
+</span>
+
+<ol class="background-list">
+    <li>
+        <p>In the opened template designer, click on sales from the <em>Insert Merge Block</em> drop-down to insert the outer merge block sales.</p>
+    </li>
+    <li>
+        <p>Set the input position into the block row and add a table row using the right-click context menu.</p>
+
+        <span class="img-container">
+            <img src="{path}concepts/images/insert_row.png" />
+        </span>
+    </li>
+    <li>
+        <p>Set the input position into the newly created table row and choose items from the <em>Insert Merge Block</em> drop-down to insert the nested block <em>items</em>.</p>
+    </li>
+    <li>
+        <p>In the opened dialog, select the 2 columns <em>price</em> and <em>qty</em> and confirm with <em>OK</em>.</p>
+        
+        <span class="img-container">
+            <img src="{path}concepts/images/dialog.png" />
+        </span>
+    </li>
+</ol>
+
+<p>A second nested block has been inserted into the outer block:</p>
+
+<span class="img-container">
+    <img src="{path}concepts/images/done.png" />
+</span>
+
+<p>When previewing this template, the expected results of the nested block are rendered successfully:</p>
+
+<span class="img-container">
+    <img src="{path}concepts/images/results.png" />
+</span>
