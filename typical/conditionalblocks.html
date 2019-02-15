@@ -1,0 +1,25 @@
+<h1>Conditional Text Blocks Based on Merge Blocks</h1>
+
+<p>In several applications, it is required to render or to remove a complete text block in a template based on specific conditions. The following screenshot shows a template with a merge block (highlighted in red) that should be rendered, if the merge data contains data for this specific block with the name <em>conditional</em>:</p>
+
+<span class="img-container">
+    <img src="{path}typical/images/template-conditional.png" />
+</span>
+
+<p>Consider, we have the following classes as the data source in C# .NET:</p>
+
+<script src="https://gist.github.com/bjoerntx/7a4e0ac88a03b25affa266419024652b.js"></script>
+
+<h2>Using the RemoveEmptyBlocks Property</h2>
+
+<p>The following code creates a new instance of the data class <em>Report</em> and an empty <em>Conditional</em> class. In the <a href="../../endpoint/document/merge#MergeSettings-Post">MergeSettings</a> object, which is part of the ReportingCloud <a href="../../endpoint/document/merge#MergeBody-Post">MergeBody</a>, the <em>RemoveEmptyBlocks</em> property is set to true.</p>
+
+<script src="https://gist.github.com/bjoerntx/eb808595ef9ba12db1eec9c67f4496a3.js"></script>
+
+<p>In case, the data for the merge block conditional is empty, the complete merge block gets removed, if <em>RemoveEmptyBlocks</em> is set to true. The following animation shows the result for both cases:</p>
+
+<span class="img-container">
+    <img src="{path}typical/images/ani_template.gif" />
+</span>
+
+<p>The logic that defines which block gets rendered or removed is not part of the template, but your data source and therefore, part of your application.</p>

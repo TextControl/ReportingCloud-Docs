@@ -1,0 +1,29 @@
+<h1>Merge HTML Content into Merge Fields</h1>
+
+<p>ReportingCloud provides a way to merge formatted content into merge fields. The <a href="../../endpoint/document/merge#MergeSettings-Post">MergeSettings</a> object used in the <a href="../../endpoint/document/merge">document/merge</a> method received the new property mergeHtml that specifies whether field data can contain formatted HTML content or not.</p>
+
+<p>If this property is set to true, field data can contain simple HTML formatting such as <strong>&lt;strong&gt;</strong>, <strong>&lt;em&gt;</strong> and <strong>&lt;u&gt;</strong>. The complete field data string must be enclosed in an &lt;html&gt; tag element:</p>
+
+<script src="https://gist.github.com/bjoerntx/ac13698e04048f7ceca8b3c7f95ac971.js"></script>
+
+<p>In most cases, this feature has been requested to merge formatted comments into templates. Consider the following sample template:</p>
+
+<span class="img-container">
+    <img src="{path}typical/images/template_comments.png" />
+</span>
+
+<p>The following code uses the <a href="../sdks/dotnet">.NET Framework SDK</a> which is available as a NuGet package:</p>
+
+<script src="https://gist.github.com/bjoerntx/f33e5b49e0e817eb1b8a51f4b9ac5962.js"></script>
+
+<p>The screenshot below shows the formatted HTML that has been merged into the merge field:</p>
+
+<span class="img-container">
+    <img src="{path}typical/images/template_results.png" />
+</span>
+
+<p>The initial font name, font-size, color and font background color will be maintained on updating the text during the merge process.</p>
+
+<div class="note note-alarm">
+    Careful: Because font settings such as name, size and color are maintained, they cannot be changed or set in the HTML.
+</div>

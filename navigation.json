@@ -130,6 +130,18 @@
         "DisplayName": "Merging Images into Image Placeholders",
         "Active": false,
         "FeaturedTag": false
+      },
+      {
+        "Name": "conditionalblocks",
+        "DisplayName": "Conditional Text Blocks Based on Merge Blocks",
+        "Active": false,
+        "FeaturedTag": false
+      },
+      {
+        "Name": "html",
+        "DisplayName": "Merge HTML Content into Merge Fields",
+        "Active": false,
+        "FeaturedTag": false
       }
     ]
   },
