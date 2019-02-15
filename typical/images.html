@@ -1,0 +1,47 @@
+<h1>Merging Images into Image Placeholders</h1>
+
+<p>Merging images is a very simple task using the Text Control ReportingCloud Web API. Using the online template editor, you can add image placeholders into your template document. These placeholders can be bound to values in your JSON data source.</p>
+
+<h2>Creating a Template with Image Placeholders</h2>
+
+<p>In order to create a template with an image placeholder, follow these simple steps:</p>
+
+<ol class="background-list">
+    <li>
+        <p>The JSON data must contain the image binary data encoded as a Base64 string. The image can be of type JPG, PNG, BMP and GIF. In your ReportingCloud <a target="_blank" href="https://portal.reporting.cloud/MyDatasources/Index/">Portal</a>, click on <em>My Datasource Excerpts</em> and create a new datasource excerpts file by pasting the following JSON into the <em>Datasource Excerpt</em> text box:</p>     
+        <script src="https://gist.github.com/bjoerntx/3d2d801f5136e648f7bce27834ee5481.js"></script>
+        <span class="img-container">
+            <img src="{path}typical/images/image_merging2.png" />
+        </span>
+        <p>Confirm the creation with <em>Create Excerpt</em>.</p>
+    </li>
+    <li>
+        <p>Click on <em>My Templates</em> and create a new template by clicking <em>New Template</em>. Type in a document name, select your preferred document format such as <em>DOCX</em> and confirm with <em>OK</em>.</p>
+    </li>
+    <li>
+        <p>Confirm the next dialog with <em>Edit Template</em> and select the created JSON excerpt file created in step 1 using the <em>Select datasource excerpt file</em> drop-down box. Open the template editor by clicking <em>Edit Template</em>:</p>
+        <span class="img-container">
+            <img src="{path}typical/images/image_merging3.png" />
+        </span>
+    </li>
+    <li>
+        <p>Choose <em>Image Placeholder</em> from the <em>Image</em> drop-down from the <em>Insert</em> ribbon tab:</p>
+        <span class="img-container">
+            <img src="{path}typical/images/image_merging1.png" />
+        </span>
+    </li>
+    <li>
+        <p>Right-click the image and open the <em>Select Object Data Source</em> drop-down box. Select <em>Master</em> -> <em>image</em> as the data source to bind the placeholder to the data column in the excerpt file.</p>
+        <span class="img-container">
+            <img src="{path}typical/images/image_merging4.png" />
+        </span>
+    </li>
+    <li>
+        <p>Click <em>Preview Merge Fields</em> in the <em>Reports</em> ribbon tab and confirm the opened dialog box with <em>OK</em>:</p>
+        <span class="img-container">
+            <img src="{path}typical/images/image_merging5.png" />
+        </span>
+    </li>
+</ol>
+
+<p>When <a href="../../endpoint/document/merge">merging</a> your template with JSON data using the Web API, the image data must be provided in the same way like in the excerpt file.</p>

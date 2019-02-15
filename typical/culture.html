@@ -1,0 +1,31 @@
+<h1>Setting the Culture for Date and Currency Fields</h1>
+
+<p>ReportingCloud provides fields that are localized automatically based on a culture that can be specified. We  introduced a property in the MergeSettings object to specify the culture for the merge process.</p>
+
+<h2>The Culture Property</h2>
+
+<p>The endpoint <a href="../../endpoint/document/merge">document/merge</a> accepts a <a href="../../endpoint/document/merge#MergeBody-Post">MergeBody</a> object in the request body data. This object contains a <a href="../../endpoint/document/merge#MergeSettings-Post">MergeSettings</a> object to adjust several settings for the merge process. The new property <em>culture</em> accepts a string that specifies the culture for the merge process for date and currency values. It must be the <em>Language Culture Name</em> that can be found in this list:</p>
+
+<p><a href="https://msdn.microsoft.com/en-us/library/ee825488(v=cs.20).aspx">Table of Language Culture Names</a></p>
+
+<p>For example: For French use <em>"fr-FR"</em>, for German <em>"de-DE"</em>. Default is English <em>"en-US"</em>.</p>
+
+<h2>Sample</h2>
+
+<p>Consider a merge field in an invoice that shows the price of a product.</p>
+
+<span class="img-container">
+    <img src="{path}typical/images/template.png" />
+</span>
+
+<p>This field should be formatted as a currency field which is done by setting a <em>C</em> to the <em>Numeric Format</em> option:</p>
+
+<span class="img-container">
+    <img src="{path}typical/images/field-properties.png" />
+</span>
+
+<p>When merging this field with culture set to <em>"de-DE"</em>, you will get a <em>&euro;</em> currency symbol. If set to <em>"en-US"</em>, you will get a <em>&dollar;</em> currency symbol. The same is valid for the language of long date field formats:</p>
+
+<span class="img-container">
+    <img src="{path}typical/images/date.png" />
+</span>

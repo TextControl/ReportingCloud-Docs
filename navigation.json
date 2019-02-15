@@ -38,76 +38,6 @@
     ]
   },
   {
-    "Name": "concepts",
-    "DisplayName": "Concepts",
-    "Active": false,
-    "Action": "chapter",
-    "SubTopics": [
-      {
-        "Name": "mergingtemplates",
-        "DisplayName": "Merging Templates",
-        "Active": false,
-        "FeaturedTag": false
-      },
-      {
-        "Name": "dataformat",
-        "DisplayName": "The Merge Data JSON Object",
-        "Active": false,
-        "FeaturedTag": false
-      },
-      {
-        "Name": "fields",
-        "DisplayName": "Templates with JSON Excerpt Files",
-        "Active": false,
-        "FeaturedTag": false
-      },
-      {
-        "Name": "blocks",
-        "DisplayName": "Nested Repeating Blocks",
-        "Active": false,
-        "FeaturedTag": false
-      }
-    ]
-  },
-  {
-    "Name": "sdks",
-    "DisplayName": "ReportingCloud SDKs",
-    "Active": false,
-    "Action": "chapter",
-    "SubTopics": [
-      {
-        "Name": "overview",
-        "DisplayName": "SDK Overview",
-        "Active": false,
-        "FeaturedTag": false
-      },
-      {
-        "Name": "dotnet",
-        "DisplayName": ".NET Framework SDK (C#)",
-        "Active": false,
-        "FeaturedTag": false
-      },
-      {
-        "Name": "php",
-        "DisplayName": "ReportingCloud PHP SDK",
-        "Active": false,
-        "FeaturedTag": false
-      },
-      {
-        "Name": "java",
-        "DisplayName": "ReportingCloud Java SDK",
-        "Active": false,
-        "FeaturedTag": false
-      },
-      {
-        "Name": "ruby",
-        "DisplayName": "ReportingCloud Ruby SDK",
-        "Active": false,
-        "FeaturedTag": false
-      }
-    ]
-  },
-  {
     "Name": "endpoint",
     "DisplayName": "API Reference",
     "Active": false,
@@ -146,6 +76,96 @@
       {
         "Name": "proofing",
         "DisplayName": "Proofing",
+        "Active": false,
+        "FeaturedTag": false
+      }
+    ]
+  },
+  {
+    "Name": "concepts",
+    "DisplayName": "Concepts",
+    "Active": false,
+    "Action": "chapter",
+    "SubTopics": [
+      {
+        "Name": "mergingtemplates",
+        "DisplayName": "Merging Templates",
+        "Active": false,
+        "FeaturedTag": false
+      },
+      {
+        "Name": "dataformat",
+        "DisplayName": "The Merge Data JSON Object",
+        "Active": false,
+        "FeaturedTag": false
+      },
+      {
+        "Name": "fields",
+        "DisplayName": "Templates with JSON Excerpt Files",
+        "Active": false,
+        "FeaturedTag": false
+      },
+      {
+        "Name": "blocks",
+        "DisplayName": "Nested Repeating Blocks",
+        "Active": false,
+        "FeaturedTag": false
+      }
+    ]
+  },
+  {
+    "Name": "typical",
+    "DisplayName": "Typical Tasks",
+    "Active": false,
+    "Action": "chapter",
+    "SubTopics": [
+      {
+        "Name": "culture",
+        "DisplayName": "Setting the Culture for Date and Currency Fields",
+        "Active": false,
+        "FeaturedTag": false
+      },
+      {
+        "Name": "images",
+        "DisplayName": "Merging Images into Image Placeholders",
+        "Active": false,
+        "FeaturedTag": false
+      }
+    ]
+  },
+  {
+    "Name": "sdks",
+    "DisplayName": "ReportingCloud SDKs",
+    "Active": false,
+    "Action": "chapter",
+    "SubTopics": [
+      {
+        "Name": "overview",
+        "DisplayName": "SDK Overview",
+        "Active": false,
+        "FeaturedTag": false
+      },
+      {
+        "Name": "dotnet",
+        "DisplayName": ".NET Framework SDK (C#)",
+        "Active": false,
+        "FeaturedTag": false
+      },
+      {
+        "Name": "php",
+        "DisplayName": "ReportingCloud PHP SDK",
+        "Active": false,
+        "FeaturedTag": false
+      },
+      {
+        "Name": "java",
+        "DisplayName": "ReportingCloud Java SDK",
+        "Active": false,
+        "FeaturedTag": false
+      },
+      {
+        "Name": "ruby",
+        "DisplayName": "ReportingCloud Ruby SDK",
         "Active": false,
         "FeaturedTag": false
       }
