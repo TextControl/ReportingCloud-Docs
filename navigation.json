@@ -24,6 +24,12 @@
         "FeaturedTag": false
       },
       {
+        "Name": "first",
+        "DisplayName": "Create your First Document",
+        "Active": false,
+        "FeaturedTag": false
+      },
+      {
         "Name": "portal",
         "DisplayName": "Portal Overview",
         "Active": false,

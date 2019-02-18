@@ -1,0 +1,106 @@
+<h1>Create your First Document</h1>
+
+<p>After you created a trial acccount and created at least one API Key, you can send your first request to create a document. When creating a trial account, a demo template has been created into your storage account.</p>
+
+<h2>Prerequisites</h2>
+
+<ol class="background-list">
+    <li>
+        <p>
+            <strong>Trial Account</strong><br />
+            <a href="../introduction/trial">Sign up</a> for a trial account.
+        </p>
+    </li>
+    <li>
+        <p>
+            <strong>Create an API Key</strong><br />
+            In order to send your first request, you will need to create an <a href="../introduction/apikey">API Key</a> in the ReportingCloud Portal.
+        </p>
+    </li>
+</ol>
+
+<div class="note note-warning">
+    Please check the <a href="https://portal.reporting.cloud/MyTemplates/">My Templates</a> overview in your portal and make sure that the demo template <em>sample_invoice.tx</em> has been created in your template storage.</div>
+
+<h2>Build your Request</h2>
+
+<p>In the following form, the endpoint <a href="../../endpoint/document/merge">document/merge</a> is called using JavaScript. You simply need to add your API Key, manipulate the <em>mergeData</em> in the <a href="../../endpoint/document/merge#MergeBody-Post">mergeBody</a> object and to send the request.</p>
+
+<ol class="background-list">
+    <li>
+        <p><strong>Specify your API Key</strong></p>
+        <p>
+            <label for="apikey">API Key</label>
+            <input type="text" class="form-control" id="apikey" aria-describedby="apikeyHelp" placeholder="Enter API Key">
+            <small id="apikeyHelp" class="form-text text-muted">The API Key is securely transmitted to ReportingCloud using HTTPS.</small>
+        </p>
+    </li>
+    <li>
+        <p><strong>Set the return format</strong></p>
+        <p>
+            <div class="form-group">
+                <label for="returnFormat">returnFormat</label>
+                <select class="form-control" id="returnFormat">
+                    <option>PDF</option>
+                    <option>DOCX</option>
+                    <option>DOC</option>
+                    <option>RTF</option>
+                    <option>HTML</option>
+                </select>
+            </div>
+        </p>
+    </li>
+    <li>
+        <p><strong>Set the merge data</strong></p>
+        <p>
+            <div class="editor" id="request-json">[{"yourcompany_companyname":"TextControl, LLC","yourcompany_zip":"28226","yourcompany_city":"Charlotte","yourcompany_street":"6926 Shannon Willow Rd,Suite 400","yourcompany_phone":"7045447445","yourcompany_fax":"704-542-0936","yourcompany_url":"www.textcontrol.com","yourcompany_email":"sales@textcontrol.com","invoice_no":"778723","billto_name":"Joey Montana","billto_companyname":"Montana, LLC","billto_customerid":"123","billto_zip":"27878","billto_city":"Charlotte","billto_street":"1 Washignton Dr","billto_phone":"8872673356","payment_due":"20/1/2016","payment_terms":"NET30","salesperson_name":"Mark Frontier","delivery_date":"20/1/2016","delivery_method":"Ground","delivery_method_terms":"NET30","recipient_name":"Joey Montana","recipient_companyname":"Montana, LLC","recipient_zip":"27878","recipient_city":"Charlotte","recipient_street":"1 Washignton Dr","recipient_phone":"8872673356","item":[{"qty":"1","item_no":"1","item_description":"Itemdescription1","item_unitprice":"2663","item_discount":"20","item_total":"2130.40"},{"qty":"1","item_no":"2","item_description":"Itemdescription2","item_unitprice":"5543","item_discount":"0","item_total":"5543"}],"total_discount":"532.60","total_sub":"7673.4","total_tax":"537.138","total":"8210.538"}]</div>
+        </p>
+    </li>
+    <li>
+        <p><strong>Set the merge data</strong></p>
+        <p>
+            <input onclick="createRequest(true)" type="button" class="btn btn-primary" value="Create Request" />
+        </p>
+    </li>
+</ol>
+
+<div class="collapse" id="yourRequest">
+
+    <h2>Your Request</h2>
+
+    <p>The following generated request will be send to this endpoint:</p>
+
+    <div class="endpoint post">
+        <p id="request-endpoint">https://api.reporting.cloud/v1/<strong>document/merge<em><span id="label-returnFormat"></span><span id="label-templateName"></span></em></strong></p>
+    </div>
+
+    <h4>HTTP Header</h4>
+
+    <p class="inline-code">Authorization: ReportingCloud-APIKey <span id="label-apikey"></span></p>
+
+    <h4>Request Payload</h4>
+
+    <p>
+        <div class="editor" id="request-payload">
+            {
+            "mergeData": "",
+            "template": null,
+            "mergeSettings": null
+            }
+        </div>
+    </p>
+
+    <p><input onclick="sendRequest()" type="button" class="btn btn-primary" value="Send Request" /><i id="request-progress" class="fa fa-cog fa-spin fa-fw d-none ml-2"></i></p>
+
+    <h2>ReportingCloud Response</h2>
+
+    <p>
+        <div class="editor" id="response"></div>
+    </p>
+
+    <p><input id="request-download" onclick="downloadDocument()" type="button" class="btn btn-primary disabled" value="Download Document" /></p>
+
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.2/ace.js"></script>
+<script src="/Scripts/request.js"></script>
