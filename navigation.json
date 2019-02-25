@@ -40,6 +40,12 @@
         "DisplayName": ".NET Framework Quickstart",
         "Active": false,
         "FeaturedTag": false
+      },
+      {
+        "Name": "support",
+        "DisplayName": "Getting Support",
+        "Active": false,
+        "FeaturedTag": false
       }
     ]
   },
