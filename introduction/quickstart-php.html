@@ -88,45 +88,18 @@
 
 <p>You can now open the PDF file in your favorite PDF viewer.</p>
 
+<p>So, what is going in in the above code snippet?</p>
 
-
-
-
-<h2>x</h2>
-
-<h2>x</h2>
-
-<!--
-
-<h2>Installation</h2>
-
-<p>Install the ReportingCloud PHP SDK in your project using <a href="http://getcomposer.org/">Composer</a>:</p>
-
-<p class="nuget">composer require textcontrol/txtextcontrol-reportingcloud:^2.0</p>
-
-<p>You are now ready to create your first application.</p>
-
-<h2>xx</h2>
-
-<ol class="background-list">
-    <li>
-        <p>x</p>
-    </li>
-    <li>
-        <p>x</p>
-    </li>
-    <li>
-        <p>x</p>
-    </li>
-    <li>
-        <p>x</p>
-    </li>
-    <li>
-        <p>x</p>
-
-    <li>
-        <p>x</p>
-    </li>
+<ol>
+    <li><p>On line 2, we turn on strict_types, to ensure that types are enforced by PHP.</p></li>
+    <li><p>On line 4, we include Composer's autoloader file, so that the PHP SDK and dependencies are correctly autoloaded.</p></li>
+    <li><p>On lines 6 to 8, we import the PHP SDK.</p></li>
+    <li><p>On lines 10 to 12, we instantiate the main ReportingCloud component.</p></li>
+    <li><p>On line 14, we define the filename of the template file. This is a very simple template that ships with the PHP SDK for demonstration purposes.</p></li>
+    <li><p>On line 15, we define the filename of the output PDF file.</p></li>
+    <li><p>On lines 17 to 20, we define the merge data -- that is the data that will be inserted into the template.</p></li>
+    <li><p>On lines 22 to 27, we send all the above to the ReportingCloud service, and are returned with an array of binary data.</p></li>
+    <li><p>On line 29, we write the binary data to disk.</p></li>
 </ol>
 
--->
+<p>Congratulations! You have now complete a very basic mail-merge operation using ReportingCloud.</p>
