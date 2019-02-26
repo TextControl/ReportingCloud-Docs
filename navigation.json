@@ -45,7 +45,7 @@
   },
   {
     "Name": "quickstart",
-    "DisplayName": "Quickstart Guides",
+    "DisplayName": "Quickstart Tutorials",
     "Active": false,
     "Action": "chapter",
     "SubTopics": [
