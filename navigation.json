@@ -42,6 +42,12 @@
         "FeaturedTag": false
       },
       {
+        "Name": "quickstart-php",
+        "DisplayName": "PHP Quickstart",
+        "Active": false,
+        "FeaturedTag": false
+      },
+      {
         "Name": "support",
         "DisplayName": "Getting Support",
         "Active": false,
