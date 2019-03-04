@@ -9,7 +9,7 @@
         "Name": "whatisreportingcloud",
         "DisplayName": "What is ReportingCloud?",
         "Active": false,
-        "FeaturedTag": false
+        "FeaturedTag": true
       },
       {
         "Name": "trial",
