@@ -9,7 +9,7 @@
         "Name": "whatisreportingcloud",
         "DisplayName": "What is ReportingCloud?",
         "Active": false,
-        "FeaturedTag": true
+        "FeaturedTag": false
       },
       {
         "Name": "trial",
@@ -53,13 +53,13 @@
         "Name": "dotnet",
         "DisplayName": ".NET Framework Quickstart",
         "Active": false,
-        "FeaturedTag": false
+        "FeaturedTag": true
       },
       {
         "Name": "php",
         "DisplayName": "PHP Quickstart",
         "Active": false,
-        "FeaturedTag": false
+        "FeaturedTag": true
       }
     ]
   },
