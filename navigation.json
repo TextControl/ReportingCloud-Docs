@@ -12,6 +12,12 @@
         "FeaturedTag": false
       },
       {
+        "Name": "idea",
+        "DisplayName": "The Idea",
+        "Active": false,
+        "FeaturedTag": true
+      },
+      {
         "Name": "trial",
         "DisplayName": "Work with your Trial Account",
         "Active": false,

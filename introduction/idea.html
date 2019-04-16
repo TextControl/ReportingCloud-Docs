@@ -1,0 +1,33 @@
+<h1>The Idea of ReportingCloud</h1>
+
+<p>Tired of building PDF documents by "programming" them? Use ReportingCloud to merge JSON data into pre-designed MS Word documents and create pixel-perfect PDFs from any application.</p>
+
+<h2>See how that works</h2>
+
+<ol class="background-list">
+    <li>
+        <p>Using the online template designer part of the <a href="http://portal.reporting.cloud/">ReportingCloud Portal</a>, you create a template with placeholders and repeating blocks:</p>
+        <p>
+            <span class="img-container">
+                <img src="{path}introduction/images/creating-template.gif" />
+            </span>
+        </p>
+    </li>
+    <li>
+        <p>Prepare your data by serializing your business objects and any other data sources to JSON:</p>
+        <script src="https://gist.github.com/bjoerntx/10d405cd989509b180776a6f43281d17.js"></script>
+    </li>
+    <li>
+        <p>Create the document by sending a simple HTTP GET request to the Web API:</p>
+        <script src="https://gist.github.com/bjoerntx/867c579984a480d02a662f643b936732.js"></script>
+        <p>Or use one of our fully maintained <a href="../sdks/overview">ReportingCloud SDKs</a> and create the document using an API call in your preferred language.</p>
+    </li>
+    <li>
+        <p>The next animation shows the merging process where the JSON data is merged into the placeholders:</p>
+        <p>
+            <span class="img-container">
+                <img src="{path}introduction/images/merging-template.gif" />
+            </span>
+        </p>
+    </li>
+</ol>
