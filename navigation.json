@@ -42,10 +42,30 @@
         "FeaturedTag": false
       },
       {
-        "Name": "quickstart-dotnet",
-        "DisplayName": ".NET Framework Quickstart",
+        "Name": "support",
+        "DisplayName": "Getting Support",
         "Active": false,
         "FeaturedTag": false
+      }
+    ]
+  },
+  {
+    "Name": "quickstart",
+    "DisplayName": "Quickstart Tutorials",
+    "Active": false,
+    "Action": "chapter",
+    "SubTopics": [
+      {
+        "Name": "dotnet",
+        "DisplayName": ".NET Framework Quickstart",
+        "Active": false,
+        "FeaturedTag": true
+      },
+      {
+        "Name": "php",
+        "DisplayName": "PHP Quickstart",
+        "Active": false,
+        "FeaturedTag": true
       }
     ]
   },
