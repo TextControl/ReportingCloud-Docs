@@ -1,0 +1,77 @@
+<h1>.NET Core Quickstart Tutorial</h1>
+
+<p>The ReportingCloud .NET SDK makes it easy to interact with ReportingCloud from any .NET application. The most recent version of the multi-target SDK can be found on <a href="https://www.nuget.org/packages/TXTextControl.ReportingCloud/">NuGet</a> ReportingCloud can be used in all .NET platforms and can be run on any operating system such as Windows, Linux and MacOS.</p>
+
+<p>This quickstart tutorial shows how to create your first .NET application using ReportingCloud.</p>
+
+<h2>Prerequisites</h2>
+
+<ol class="background-list">
+    <li>
+        <p>In order to use the ReportingCloud .NET SDK, you will need at least a trial account for ReportingCloud. How to register and to create a free trial account is described here: <a href="../introduction/trial#Sign-up-for-your-Free-Trial-Account">Sign up for your Free Trial Account</a></p>
+        <p>
+            <a target="_blank" class="btn btn-primary" href="https://portal.reporting.cloud/Account/Register/">Create Trial Account</a>
+        </p>
+    </li>
+    <li>
+        <p>Create an API Key for your api calls. How API Keys are managed is described here: <a href="../introduction/apikey#Manage-API-Keys">Manage API Keys</a></p>
+    </li>
+    <li>
+        <p>In the portal, make sure to add the template <em>gallery_using-prefixes.tx</em> to your template storage.</p>
+        <ul>
+            <li><p>Open the <a target="_blank" href="https://portal.reporting.cloud/Gallery/Details/?template=gallery_using-prefixes.tx">Sample Template Gallery</a></p></li>
+            <li><p>Click on <em>Add to My Templates</em> to add the sample template to your template storage.</p></li>
+        </ul>
+    </li>
+</ol>
+
+<h2>Create the Visual Studio Project</h2>
+
+<ol class="background-list">
+    <li>
+        <p>Start <a href="https://www.visualstudio.com/vs/">Visual Studio</a> 2019 (or any other Visual Studio version that supports .NET Core) and create a new ASP.NET Core Web Application. Select <em>Next</em>, choose a project name and location and create the project by clicking <em>Create</em>.</p>
+        <span class="img-container">
+            <img src="{path}quickstart/images/tutorial-dotnetcore-vs.png" />
+        </span>
+        <p>In the next dialog, select your ASP.NET Core version (2.2 in this sample) and choose <em>Web Application (Model-View-Controller)</em> and the project template. click <em>Create</em> to create the project.</p>
+        <span class="img-container">
+            <img src="{path}quickstart/images/tutorial-dotnetcore-create-vs.png" />
+        </span>
+    </li>
+    <li>
+        <p>Open the <a href="https://docs.microsoft.com/en-us/nuget/tools/package-manager-console">Package Manager Console</a> from the <em>NuGet Package Manager</em> menu item of the <em>Tools</em> main menu.</p>
+        <p>Type in the following command:</p>
+        <p class="nuget">PM> Install-Package TXTextControl.ReportingCloud</p>
+    </li>
+</ol>
+
+<h2>Create the Data Model</h2>
+
+<ol class="background-list">
+        <li>
+            <p>Create a new class named <em>Report</em>. In the <em>Solution Explorer</em>, right-click the folder <em>Models</em> and select <em>Class...</em> from the <em>Add</em> sub-menu. Name the class <em>Report.cs</em> and confirm with <em>Add</em>.</p>
+        </li>
+        <li>
+            <p>Add the following code to the class file:</p>
+            <script src="https://gist.github.com/bjoerntx/6d5abd2e1eb94ddc210a5291deb89056.js"></script>
+        </li>
+    
+        
+    </ol>
+
+<h2>Merge the Template</h2>
+
+<ol class="background-list">
+    <li>
+        <p>In the <em>Solution Explorer</em>, find the <em>HomeController.cs</em> and open it. In the <em>Index</em> method, add the following code (make sure that the return value is of type <em>FileContentResult</em>):</p>
+        <script src="https://gist.github.com/bjoerntx/52ff971eb3e35a6d28ebcbd2a0309f86.js"></script>
+    </li>
+</ol>
+
+<h2>Compile and Start the Application</h2>
+
+<p>On executing, the template is merged and returned directly to the client. In standard browsers, the PDF file should be rendered directly or be offered for download.</p>
+
+<span class="img-container">
+    <img src="{path}quickstart/images/tutorial-dotnetcore-results.png" />
+</span>

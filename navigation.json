@@ -56,16 +56,22 @@
     "Action": "chapter",
     "SubTopics": [
       {
+        "Name": "dotnetcore",
+        "DisplayName": ".NET Core   Quickstart",
+        "Active": false,
+        "FeaturedTag": true
+      },
+      {
         "Name": "dotnet",
         "DisplayName": ".NET Framework Quickstart",
         "Active": false,
-        "FeaturedTag": true
+        "FeaturedTag": false
       },
       {
         "Name": "php",
         "DisplayName": "PHP Quickstart",
         "Active": false,
-        "FeaturedTag": true
+        "FeaturedTag": false
       }
     ]
   },
