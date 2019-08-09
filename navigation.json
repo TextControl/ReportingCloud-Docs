@@ -116,6 +116,12 @@
         "DisplayName": "Proofing",
         "Active": false,
         "FeaturedTag": false
+      },
+      {
+        "Name": "processing",
+        "DisplayName": "Processing",
+        "Active": false,
+        "FeaturedTag": false
       }
     ]
   },
