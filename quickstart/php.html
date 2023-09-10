@@ -1,6 +1,6 @@
 <h1>PHP Quickstart Tutorial</h1>
 
-<p>PHP is a first class citizen of the ReportingCloud ecosystem. Text Control GmbH — the author of ReportingCloud — actively develops and supports their <a target="_blank" href="https://github.com/TextControl/txtextcontrol-reportingcloud-php">PHP SDK</a> to simplify access to the ReportingCloud Web API. Using only a few lines of code, you can create beautiful reports in all supported formats (DOC, DOCX, HTML, PDF, PDFA, RTF and TXT).</p>
+<p>PHP is a first class citizen of the ReportingCloud ecosystem. Text Control GmbH — the author of ReportingCloud — actively develops and supports their <a target="_blank" href="https://github.com/TextControl/textcontrol-reportingcloud">PHP SDK</a> to simplify access to the ReportingCloud Web API. Using only a few lines of code, you can create beautiful reports in all supported formats (DOC, DOCX, HTML, PDF, PDFA, RTF and TXT).</p>
 
 <p>This quickstart tutorial shows how to create your first ReportingCloud application using the PHP SDK.</p>
 
@@ -29,8 +29,8 @@
 <h2>Check Your PHP Version</h2>
 
 <p>
-    Since all versions of PHPs prior to 7.1 have reached end-of-life and consequently, no further security updates will be released for them, the PHP SDK only supports PHP 7.1 or newer.
-    Check you are running PHP 7.1 or newer, by opening your terminal and executing:
+    Since all versions of PHPs prior to 8.1 have reached end-of-life and consequently, no further security updates will be released for them, the PHP SDK only supports PHP 8.1 or newer.
+    Check you are running PHP 8.1 or newer, by opening your terminal and executing:
 </p>
 
 <p class="nuget">php --version</p>
@@ -38,13 +38,13 @@
 <p>The output should be something like this:</p>
 
 <p class="nuget">
-    PHP 7.1.26-2+0~20190216175340.13+stretch~1.gbpc20626 (cli) (built: Feb 16 2019 17:53:40) ( NTS )<br />
-    Copyright (c) 1997-2018 The PHP Group<br />
-    Zend Engine v3.1.0, Copyright (c) 1998-2018 Zend Technologies<br />
-    with Zend OPcache v7.1.26-2+0~20190216175340.13+stretch~1.gbpc20626, Copyright (c) 1999-2018, by Zend Technologies
+    PHP 8.1.22 (cli) (built: Aug 29 2023 10:48:28) (NTS)<br>
+    Copyright (c) The PHP Group<br>
+    Zend Engine v4.1.22, Copyright (c) Zend Technologies<br>
+    with Zend OPcache v8.1.22, Copyright (c), by Zend Technologies
 </p>
 
-<p>The PHP version number in this case is <strong>7.1.26</strong>, which is compatible to the PHP SDK.</p>
+<p>The PHP version number in this case is <strong>8.1.22</strong>, which is compatible to the PHP SDK.</p>
 
 <h2>Create a New Project</h2>
 
@@ -56,26 +56,48 @@
 
 <p>To install the PHP SDK, we use <a target="_blank" href="http://getcomposer.org/">Composer</a>. If you do not already have Composer installed on your system, please refer to the Composer <a target="_blank" href="https://getcomposer.org/doc/00-intro.md">documentation</a>. In the terminal, execute:</p>
 
-<p class="nuget">composer require textcontrol/txtextcontrol-reportingcloud:^2.0</p>
+<p class="nuget">composer require textcontrol/textcontrol-reportingcloud:^4.0</p>
 
 <p>The output should be something like this:</p>
 
 <p class="nuget">
-    ./composer.json has been created<br />
-    Loading composer repositories with package information<br />
-    Updating dependencies (including require-dev)<br />
-    Package operations: 8 installs, 0 updates, 0 removals<br />
-    - Installing symfony/polyfill-ctype (v1.10.0): Loading from cache<br />
-    - Installing webmozart/assert (1.4.0): Loading from cache<br />
-    - Installing guzzlehttp/promises (v1.3.1): Loading from cache<br />
-    - Installing ralouphie/getallheaders (2.0.5): Loading from cache<br />
-    - Installing psr/http-message (1.0.1): Loading from cache<br />
-    - Installing guzzlehttp/psr7 (1.5.2): Loading from cache<br />
-    - Installing guzzlehttp/guzzle (6.3.3): Loading from cache<br />
-    - Installing textcontrol/txtextcontrol-reportingcloud (2.1.0): Loading from cache<br />
-    guzzlehttp/guzzle suggests installing psr/log (Required for using the Log middleware)<br />
-    Writing lock file<br />
-    Generating optimized autoload files
+./composer.json has been created<br>
+Running composer update textcontrol/textcontrol-reportingcloud<br>
+Loading composer repositories with package information<br>
+Updating dependencies<br>
+Lock file operations: 12 installs, 0 updates, 0 removals<br>
+- Locking ctw/ctw-http (3.0.24)<br>
+- Locking fig/http-message-util (1.1.5)<br>
+- Locking guzzlehttp/guzzle (7.8.0)<br>
+- Locking guzzlehttp/promises (2.0.1)<br>
+- Locking guzzlehttp/psr7 (2.6.1)<br>
+- Locking psr/container (2.0.2)<br>
+- Locking psr/http-client (1.0.2)<br>
+- Locking psr/http-factory (1.0.2)<br>
+- Locking psr/http-message (2.0)<br>
+- Locking ralouphie/getallheaders (3.0.3)<br>
+- Locking symfony/deprecation-contracts (v3.3.0)<br>
+- Locking textcontrol/textcontrol-reportingcloud (4.0.1)<br>
+Writing lock file<br>
+Installing dependencies from lock file (including require-dev)<br>
+Package operations: 12 installs, 0 updates, 0 removals<br>
+- Installing fig/http-message-util (1.1.5): Extracting archive<br>
+- Installing guzzlehttp/promises (2.0.1): Extracting archive<br>
+- Installing ralouphie/getallheaders (3.0.3): Extracting archive<br>
+- Installing psr/http-message (2.0): Extracting archive<br>
+- Installing psr/http-factory (1.0.2): Extracting archive<br>
+- Installing guzzlehttp/psr7 (2.6.1): Extracting archive<br>
+- Installing psr/http-client (1.0.2): Extracting archive<br>
+- Installing symfony/deprecation-contracts (v3.3.0): Extracting archive<br>
+- Installing psr/container (2.0.2): Extracting archive<br>
+- Installing guzzlehttp/guzzle (7.8.0): Extracting archive<br>
+- Installing ctw/ctw-http (3.0.24): Extracting archive<br>
+- Installing textcontrol/textcontrol-reportingcloud (4.0.1): Extracting archive<br>
+2 package suggestions were added by new dependencies, use `composer suggest` to see details.<br>
+Generating optimized autoload files<br>
+4 packages you are using are looking for funding.<br>
+Use the `composer fund` command to find out more!<br>
+No security vulnerability advisories found
 </p>
 
 <p>Congratulations! You now have successfully installed the PHP SDK.</p>
@@ -96,14 +118,14 @@
 
 <p>You can now open the PDF file in your favorite PDF viewer.</p>
 
-<p>So, what is going in in the above code snippet?</p>
+<p>So, what is going on in the above code snippet?</p>
 
 <ol>
     <li><p>On line 2, we turn on strict_types, to ensure that types are enforced by PHP.</p></li>
     <li><p>On line 4, we include Composer's autoloader file, so that the PHP SDK and dependencies are correctly autoloaded.</p></li>
     <li><p>On lines 6 to 8, we import the PHP SDK.</p></li>
     <li><p>On lines 10 to 12, we instantiate the main ReportingCloud component. Ensure to add your API key to the <code>api_key</code> key of the constructor's options array (line 11).</p></li>
-    <li><p>On line 14, we define the filename of the template file. This is a very simple template that ships with the PHP SDK for demonstration purposes. See directory <code>/vendor/textcontrol/txtextcontrol-reportingcloud/resource</code> on your file system or in the <a target="_blank" href="https://github.com/TextControl/txtextcontrol-reportingcloud-php/tree/master/resource">GitHub repository</a>.</p></li>
+    <li><p>On line 14, we define the filename of the template file. This is a very simple template that ships with the PHP SDK for demonstration purposes. See directory <code>/vendor/textcontrol/textcontrol-reportingcloud/resource</code> on your file system or in the <a target="_blank" href="https://github.com/TextControl/textcontrol-reportingcloud/tree/master/resource">GitHub repository</a>.</p></li>
     <li><p>On line 15, we define the filename of the output PDF file.</p></li>
     <li><p>On lines 17 to 20, we define the merge data -- that is the data that will be inserted into the template.</p></li>
     <li><p>On lines 22 to 27, we send all the above to the ReportingCloud service, and are returned with an array of binary data.</p></li>
@@ -114,7 +136,7 @@
 
 <h2>What Comes Next?</h2>
 
-<p>The PHP SDK ships with a number of demo applications, which illustrate all parts of ReportingCloud. To view these demos, please take a look at directory <code>/vendor/textcontrol/txtextcontrol-reportingcloud/demo</code>, either on your file system, or in the <a target="_blank" href="https://github.com/TextControl/txtextcontrol-reportingcloud-php/tree/master/demo">GitHub repository</a>.</p>
+<p>The PHP SDK ships with a number of demo applications, which illustrate all parts of ReportingCloud. To view these demos, please take a look at directory <code>/vendor/textcontrol/textcontrol-reportingcloud/demo</code>, either on your file system, or in the <a target="_blank" href="https://github.com/TextControl/textcontrol-reportingcloud/tree/master/demo">GitHub repository</a>.</p>
 
 <h2>Getting Support</h2>
 
